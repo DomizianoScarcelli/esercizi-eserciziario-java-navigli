@@ -8,7 +8,13 @@ public class Call extends IstruzioneGenerica {
     }
 
     @Override
-    public void esegui() {
-        this.procedura.esegui();
+    public int esegui() {
+        return procedura.esegui();
     }
+
+    @Override
+    public String getNome() {
+        return "CALL";
+    }
+
 }

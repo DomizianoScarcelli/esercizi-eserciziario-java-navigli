@@ -8,9 +8,16 @@ public class Mov extends IstruzioneBinaria {
     }
 
     @Override
-    public void esegui() {
-        this.getR1().setValue(
-                this.getR2().getValue()
-        );
+    public int esegui() {
+        int nuovoValore = this.getR2().getValue();
+        this.getR1().setValue(nuovoValore);
+        return nuovoValore;
     }
+
+    @Override
+    public String getNome() {
+        return "MOV";
+    }
+
+
 }

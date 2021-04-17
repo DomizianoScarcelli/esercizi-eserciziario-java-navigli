@@ -7,9 +7,23 @@ public class Cmp extends IstruzioneBinaria {
     }
 
     @Override
-    public void esegui() {
-        if (this.getR1().getValue() == this.getR2().getValue()) this.getR1().setValue(0);
-        else if (this.getR1().getValue() < this.getR2().getValue()) this.getR1().setValue(-1);
-        else this.getR1().setValue(1);
+    public int esegui() {
+        if (this.getR1().getValue() == this.getR2().getValue()) {
+            this.getR1().setValue(0);
+            return 0;
+        }
+        if (this.getR1().getValue() < this.getR2().getValue()) {
+            this.getR1().setValue(-1);
+            return -1;
+        }
+        this.getR1().setValue(1);
+        return 1;
     }
+
+    @Override
+    public String getNome() {
+        return "CMP";
+    }
+
+
 }

@@ -1,5 +1,11 @@
 package es217;
 
+import java.util.ArrayList;
+
 public interface Istruzione {
-    void esegui();
+    int esegui();
+
+    String getNome();
+
+    ArrayList<Operando> getListaOperandi();
 }

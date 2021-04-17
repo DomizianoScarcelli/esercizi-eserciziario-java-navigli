@@ -10,4 +10,10 @@ public class Operando {
     public int getValue() {
         return value;
     }
+
+    @Override
+    public String toString() {
+        if (this instanceof Registro) return ((Registro) this).getNome() + this.getValue();
+        return Integer.toString(this.value);
+    }
 }

@@ -13,4 +13,12 @@ public class Registro extends Operando {
         this.setValue(0);
     }
 
+    public String getNome() {
+        return nome.toUpperCase();
+    }
+
+    @Override
+    public boolean equals(Object other) {
+        return (this.nome.equals(((Registro) other).getNome()));
+    }
 }

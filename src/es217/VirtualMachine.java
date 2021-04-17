@@ -1,15 +1,32 @@
 package es217;
 
-public class VirtualMachine implements Istruzione {
-    public final Procedura procedura;
+import java.util.ArrayList;
+
+public class VirtualMachine {
+    public Procedura procedura;
+    public ArrayList<Registro> listaRegistri;
+
 
     public VirtualMachine(Procedura procedura) {
         this.procedura = procedura;
+        for (Istruzione istruzione : procedura.getListaIstruzioni()) {
+            ///do something
+        }
     }
 
-    @Override
+
     public void esegui() {
         procedura.esegui();
     }
-    
+
+    public String stampaValoriRegistri() {
+        StringBuilder sb = new StringBuilder();
+        for (Registro registro : procedura.getListaRegistri()) {
+            sb.append("%s: %s".formatted(registro.getNome(), registro.getValue()));
+            sb.append("\n");
+        }
+        return sb.toString();
+    }
+
+
 }
