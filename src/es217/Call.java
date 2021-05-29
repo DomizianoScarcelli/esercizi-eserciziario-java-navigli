@@ -1,6 +1,8 @@
 package es217;
 
-public class Call extends IstruzioneGenerica {
+import java.util.ArrayList;
+
+public class Call extends IstruzioneUnaria {
     private final Procedura procedura;
 
     public Call(Procedura procedura) {
@@ -17,4 +19,13 @@ public class Call extends IstruzioneGenerica {
         return "CALL";
     }
 
+    @Override
+    public ArrayList<Operando> getListaOperandi() {
+        return null;
+    }
+
+    @Override
+    public void esegui(Operando r1) {
+
+    }
 }

@@ -32,11 +32,11 @@ public abstract class IstruzioneBinaria implements Istruzione {
         return new ArrayList<>(Arrays.asList(r1, r2));
     }
 
-    @Override
-    public String toString() {
-        if (this.getR2() instanceof Registro)
-            return "%s %s, %s".formatted(this.getNome(), ((Registro) this.getR1()).getNome(), ((Registro) this.getR2()).getNome());
-        return "%s %s, %s".formatted(this.getNome(), ((Registro) this.getR1()).getNome(), this.getR2().getValue());
-
-    }
+//    @Override
+//    public String toString() {
+//        if (this.getR2() instanceof Registro)
+//            return "%s %s, %s".formatted(this.getNome(), ((Registro) this.getR1()).getNome(), ((Registro) this.getR2()).getNome());
+//        return "%s %s, %s".formatted(this.getNome(), ((Registro) this.getR1()).getNome(), this.getR2().getValue());
+//
+//    }
 }

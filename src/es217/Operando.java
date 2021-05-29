@@ -1,6 +1,6 @@
 package es217;
 
-public class Operando {
+public abstract class Operando {
     private int value;
 
     public void setValue(int value) {

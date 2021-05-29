@@ -10,8 +10,8 @@ public abstract class IstruzioneGenerica implements Istruzione {
 
     public abstract String getNome();
 
-    public void setRegistri(Operando... registri) {
-        this.operandi = (ArrayList<Operando>) Arrays.asList(registri);
+    public void setOperandi(Operando... operandi) {
+        this.operandi = (ArrayList<Operando>) Arrays.asList(operandi);
     }
 
     public void addOperando(Operando operando) {
