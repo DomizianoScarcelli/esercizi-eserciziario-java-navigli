@@ -1,4 +1,6 @@
 package DesignPatterns.Borsa;
 
-public class Borsa {
+import java.util.Observable;
+
+public class Borsa extends Observable {
 }
