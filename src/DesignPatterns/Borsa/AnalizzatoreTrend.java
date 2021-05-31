@@ -7,15 +7,18 @@ public class AnalizzatoreTrend extends Analizzatore {
     private double trendImporto;
 
     @Override
-    public void update(Observable o, Object transazione) {
-        if (ultimaTransazione == null) trendImporto = ((Transazione) transazione).getImporto();
-        else trendImporto = ((Transazione) transazione).getImporto() - ultimaTransazione.getImporto();
+    public void analizza(Transazione t) {
+        if (ultimaTransazione == null) trendImporto = t.getImporto();
+        else trendImporto = t.getImporto() - ultimaTransazione.getImporto();
 
-        ultimaTransazione = (Transazione) transazione;
+        ultimaTransazione = t;
+
     }
 
     @Override
     public String toString() {
         return "Trend = " + trendImporto;
     }
+
+
 }
