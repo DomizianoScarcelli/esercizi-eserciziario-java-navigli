@@ -1,8 +1,6 @@
 package DesignPatterns.Borsa;
 
-import java.util.ArrayList;
 import java.util.Observable;
-import java.util.Observer;
 
 public class Borsa extends Observable {
     private static Borsa instance;

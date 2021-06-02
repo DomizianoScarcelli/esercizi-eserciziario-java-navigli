@@ -1,7 +1,5 @@
 package DesignPatterns.Borsa;
 
-import java.util.Observable;
-
 public class AnalizzatoreTrend extends Analizzatore {
     private Transazione ultimaTransazione;
     private double trendImporto;
