@@ -1,19 +1,7 @@
 package DesignPatterns.Borsa;
 
-public class Transazione {
-    private String compagnia;
-    private double importo;
+public interface Transazione {
+    public String getCompagnia();
+    public double getImporto();
 
-    public Transazione(String compagnia, double importo){
-        this.compagnia = compagnia;
-        this.importo = importo;
-    }
-
-    public String getCompagnia() {
-        return compagnia;
-    }
-
-    public double getImporto() {
-        return importo;
-    }
 }

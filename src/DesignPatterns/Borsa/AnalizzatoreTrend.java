@@ -13,6 +13,7 @@ public class AnalizzatoreTrend extends Analizzatore {
 
     }
 
+
     @Override
     public String toString() {
         return "Trend = " + trendImporto;

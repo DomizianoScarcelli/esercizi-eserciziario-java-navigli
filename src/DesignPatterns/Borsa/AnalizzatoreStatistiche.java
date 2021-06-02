@@ -1,5 +1,6 @@
 package DesignPatterns.Borsa;
 
+import javax.imageio.plugins.tiff.GeoTIFFTagSet;
 import java.util.ArrayList;
 import java.util.List;
 

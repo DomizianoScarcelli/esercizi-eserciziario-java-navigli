@@ -4,13 +4,14 @@ public class Test {
 
     public static void main(String[] args) {
         Borsa borsa = Borsa.getInstance();
-        Analizzatore analizzatore1 = new AnalizzatoreStatistiche();
-        Analizzatore analizzatore2 = new AnalizzatoreTrend();
+        AnalizzatoreStatistiche analizzatore1 = new AnalizzatoreStatistiche();
+        AnalizzatoreTrend analizzatore2 = new AnalizzatoreTrend();
         borsa.addObserver(analizzatore1);
         borsa.addObserver(analizzatore2);
-        borsa.nuovaTransazione(new Transazione( "Google", 10.56));
-        borsa.nuovaTransazione(new Transazione( "Apple", 122.56));
-        borsa.nuovaTransazione(new Transazione( "Tesla", 130.56));
-        borsa.nuovaTransazione(new Transazione( "DOGE", 144.56));
+        TransazioneChargeFactory transazioneChargeFactory = new TransazioneChargeFactory();
+        TransazioneNoChargeFactory transazioneNoChargeFactory = new TransazioneNoChargeFactory();
+        borsa.nuovaTransazione(transazioneChargeFactory.createTransazione("Google", 10.05));
+        borsa.nuovaTransazione(transazioneNoChargeFactory.createTransazione("Google No Charge", 10.05));
+
     }
 }

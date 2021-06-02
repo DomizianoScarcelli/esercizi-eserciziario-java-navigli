@@ -15,8 +15,8 @@ public class Borsa extends Observable {
     public void nuovaTransazione(Transazione t){
         setChanged();
         notifyObservers(t);
-//        for (Analizzatore analizzatore : analizzatori) analizzatore.update(this, t);
     }
+
 }
 
 
